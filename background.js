@@ -13,7 +13,10 @@ browser.contextMenus.onShown.addListener(async (info, tab) => {
     code: `document.body.style.position = "relative";
   var elem = document.createElement('div');
   elem.className = 'cmib_akfrxyz';
-elem.style.cssText = 'bottom: 0;left: 0;position:absolute;right: 0;top: 0;height: 100%;width: 100%;';
+  var body = document.body;
+  var height = Math.max( body.scrollHeight, body.offsetHeight);
+  var width = Math.max( body.scrollWidth, body.offsetWidth);
+elem.style.cssText = 'bottom: 0;left: 0;z-index: 99999;position:absolute;right: 0;top: 0;height: ' + height + 'px;width: ' + width + 'px;';
 document.body.appendChild(elem);`
   });
 
@@ -34,4 +37,3 @@ browser.contextMenus.onHidden.addListener(() => {
     [...document.getElementsByClassName("cmib_akfrxyz")].forEach(e=>e.remove());`
   });
 });
-
