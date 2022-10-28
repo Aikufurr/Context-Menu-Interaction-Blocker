@@ -1,7 +1,7 @@
 {
   "name": "Context Menu Interaction Blocker",
   "description": "Blocks interaction with the webpage when opening the context menu",
-  "version": "1.0",
+  "version": "2.0",
   "homepage_url": "https://aikufurr.xyz",
   "manifest_version": 2,
   "permissions": [
