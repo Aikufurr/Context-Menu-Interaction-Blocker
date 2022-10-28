@@ -1,0 +1,24 @@
+{
+  "name": "Context Menu Interaction Blocker",
+  "description": "Blocks interaction with the webpage when opening the context menu",
+  "version": "1.0",
+  "homepage_url": "https://aikufurr.xyz",
+  "manifest_version": 2,
+  "permissions": [
+    "contextMenus",
+    "<all_urls>",
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "update_url": "https://gist.githubusercontent.com/Aikufurr/477dbd6768963f05505098b328012944/raw/7e864d7ddc383a9bf28bb607e0dd9ac9ede35491/updates.json",
+      "id": "{8d1d15fe-e7e5-47b4-b480-6f503433be49}"
+    }
+  }
+}
